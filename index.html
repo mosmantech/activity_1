@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <h1>Hello team</h1>
     <p>Now We will push this file to the Github.</p>
+    <button id="click-me">Click me</button>
     <section>
         I am a web developer
     </section>
+    <div></div>
+    <script>
+        const btn = document.getElementById("click-me");
+        const myDiv = document.querySelector("div");
+        btn.addEventListener("click", () => {
+            const para = document.createElement("p");
+            para.textContent = "paragragh created";
+            myDiv.appendChild(para);
+        })
+    </script>
 </body>
 </html>
